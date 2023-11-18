@@ -1,3 +1,5 @@
+import 'package:belkis/widgets/banner_highlights.dart';
+import 'package:belkis/widgets/banner_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
@@ -27,8 +29,8 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          //   BannerWidget(),
-          //  BannerHighlights(),
+          BannerWidget(),
+          //   BannerHighlights(),
           Divider(
             height: 3,
             color: Colors.green,

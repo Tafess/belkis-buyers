@@ -56,7 +56,7 @@ class _MainScreenState extends State<MainScreen> {
         decoration: BoxDecoration(
             border: Border(
                 top: BorderSide(
-          color: Colors.blue.shade900,
+          color: Colors.white,
         ))),
         child: BottomNavigationBar(
             backgroundColor: Colors.white,
@@ -92,8 +92,8 @@ class _MainScreenState extends State<MainScreen> {
             ],
             currentIndex: _selectedIndex,
             selectedItemColor: Colors.blue,
-            unselectedItemColor: Colors.deepOrange,
-            showUnselectedLabels: true,
+            showUnselectedLabels: false,
+            unselectedItemColor: Colors.black,
             onTap: _onItemTapped,
             selectedFontSize: 12,
             type: BottomNavigationBarType.fixed),

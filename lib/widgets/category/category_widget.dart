@@ -1,5 +1,6 @@
 import 'package:belkis/models/category_model.dart';
 import 'package:belkis/screens/main_screen.dart';
+import 'package:belkis/widgets/home_product_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutterfire_ui/firestore.dart';
@@ -23,9 +24,27 @@ class _CategoryWidgetState extends State<CategoryWidget> {
             padding: const EdgeInsets.all(8.0),
             child: Align(
               alignment: Alignment.centerLeft,
-              child: Text(
-                'Stores for you',
-                style: TextStyle(fontSize: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Products for you',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => HomeProductList(
+                            category: _selectedCategory,
+                          ),
+                        ),
+                      );
+                    },
+                    child: Text('View all...', style: TextStyle(fontSize: 12)),
+                  )
+                ],
               ),
             ),
           ),
@@ -72,9 +91,9 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                   Container(
                     child: IconButton(
                       onPressed: () {
-                        Navigator.push<void>(
+                        Navigator.push(
                           context,
-                          MaterialPageRoute<void>(
+                          MaterialPageRoute(
                             builder: (BuildContext context) => const MainScreen(
                               index: 1,
                             ),
@@ -87,6 +106,10 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                 ],
               ),
             ),
+          ),
+          SizedBox(height: 20),
+          HomeProductList(
+            category: _selectedCategory,
           ),
         ],
       ),

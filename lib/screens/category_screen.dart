@@ -27,8 +27,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
           selectedCategory == null ? _title : selectedCategory!,
           style: TextStyle(
               color: Colors.white,
-              fontFamily: 'Semi-Bold',
-              fontSize: 40,
+              fontFamily: 'Brand-Bold',
+              fontSize: 20,
               fontStyle: FontStyle.italic),
         ),
         elevation: 0,
@@ -87,16 +87,16 @@ class _CategoryScreenState extends State<CategoryScreen> {
                               children: [
                                 ClipOval(
                                     child: CachedNetworkImage(
-                                  width: 70,
-                                  height: 70,
+                                  width: 50,
+                                  height: 50,
                                   fit: BoxFit.cover,
                                   imageUrl: category.image!,
                                 )),
                                 Text(
                                   category.categoryName!,
                                   style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Semi-Bold',
+                                      fontSize: 12,
+                                      fontFamily: 'Bold',
                                       letterSpacing: 1,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold),
