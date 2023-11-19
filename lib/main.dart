@@ -45,7 +45,8 @@ class MyApp extends StatelessWidget {
       title: 'Belkis marketplace',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        fontFamily: 'Brand-Bold',
+        primaryColor: Colors.deepOrange,
+        fontFamily: 'Regular',
       ),
       initialRoute: SplashScreen.id,
       routes: {

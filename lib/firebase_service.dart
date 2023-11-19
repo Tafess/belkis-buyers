@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:intl/intl.dart';
 
 class FirebaseService {
   CollectionReference Banners =
@@ -13,4 +14,10 @@ class FirebaseService {
       FirebaseFirestore.instance.collection('mainCategories');
   CollectionReference subCategories =
       FirebaseFirestore.instance.collection('subCategories');
+
+  String formatedNumber(number) {
+    var f = NumberFormat('#,##,###');
+    String formatedNumber = f.format(number);
+    return formatedNumber;
+  }
 }
